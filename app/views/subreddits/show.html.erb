@@ -1,0 +1,11 @@
+
+
+<h2><%= @subreddit.title %></h2>
+
+<h3>Description: <%= @subreddit.description%></h3>
+<h3>Subscribers: <%= @subreddit.total_subscribers%></h3>
+
+<% @subreddit.posts.each do |post| %>
+    <p><%= link_to post.title, :controller => :posts, :action => :show, :id => post.id %></p>
+<% end %>
+

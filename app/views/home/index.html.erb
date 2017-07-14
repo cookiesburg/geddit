@@ -1,0 +1,8 @@
+<h2> Come and GEDDIT </h2>
+
+<% @top_posts.each do |x| %>
+<p><h3><%= link_to x.title, :controller => :posts, :action => :show, :id => x.id %> 
+    <%end%>
+
+
+

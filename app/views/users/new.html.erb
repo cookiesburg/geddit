@@ -1,0 +1,22 @@
+<h2>Enter the Trash Heap!</h2>
+
+
+<%= form_for @user, url: {action: "create"}, html: {class: "sign_up_form"} do |f| %>
+  <p><h3>
+    <div>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+    <div>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div>
+      <%= f.submit "Create" %>
+    </div>
+    </h3></p>
+<% end %>

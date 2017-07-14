@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyOtherReddit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="header">
+      <ul>
+        <li>
+          <%= image_tag(href ="https://s-media-cache-ak0.pinimg.com/736x/fb/92/47/fb92472a9d2939e4f1d51b4adc10333e--raccoon-illustration-graphic-illustration.jpg",class:'logo') %>
+          GEDDIT
+        </li>
+
+        <li><%= link_to "Home", :controller => :home, :action => :index %>
+        </li>
+        <li><%= link_to "Subreddits", :controller => :subreddits, :action => :index %>
+        </li>
+        <li><%= link_to "Join Geddit", :controller => :users, :action => :new %>
+        </li>
+      
+      </ul>
+    </div>
+
+    <div id="body">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
