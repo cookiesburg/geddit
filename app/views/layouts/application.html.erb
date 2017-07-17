@@ -4,12 +4,18 @@
     <title>MyOtherReddit</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--<style type="text/css">-->
+  
   </head>
 
   <body>
-    <div id="header">
+  <div class="container">
+    
+    <div id="header" >
       <ul>
         <li>
           <%= image_tag(href ="https://s-media-cache-ak0.pinimg.com/736x/fb/92/47/fb92472a9d2939e4f1d51b4adc10333e--raccoon-illustration-graphic-illustration.jpg",class:'logo') %>
@@ -25,12 +31,16 @@
       
       </ul>
     </div>
-
+    
+   
+    
     <div id="body">
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
     </div>
+   
+  </div>
   </body>
 </html>

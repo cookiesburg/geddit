@@ -2,6 +2,6 @@
 
 <h2>Subreddits</h2>
 <% @subreddits.each do |subreddit| %>
-  <p><%= link_to subreddit.title, :controller => :subreddits, :action => :show, :id => subreddit.id %> 
+  <p class='posts'><%= link_to subreddit.title, :controller => :subreddits, :action => :show, :id => subreddit.id %> 
 <% end %>
 

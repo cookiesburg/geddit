@@ -1,0 +1,18 @@
+<h2>Please, Create More Garbage...</h2>
+
+
+<%= form_for @subreddit, url: {action: "create"}, html: {class: "new_subreddit_form"} do |s| %>
+  <p><h3>
+    <div>
+      <%= s.label 'Title of New SubGeddit' %>
+      <%= s.text_field :title %>
+    </div>
+    <div>
+      <%= s.label 'Description' %>
+      <%= s.text_field :description %>
+    </div>
+    <div>
+      <%= s.submit "Create" %>
+    </div>
+    </h3></p>
+<% end %>

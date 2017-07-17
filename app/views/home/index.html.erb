@@ -1,8 +1,18 @@
-<h2> Come and GEDDIT </h2>
+<body>
+<head>
+<style>
+
+</style>
+<head>
+
+<h1> Come and GEDDIT </h1>
+
+
 
 <% @top_posts.each do |x| %>
-<p><h3><%= link_to x.title, :controller => :posts, :action => :show, :id => x.id %> 
+<p class='posts'><%= link_to x.title, :controller => :posts, :action => :show, :id => x.id %> 
     <%end%>
-
+</p>
+</body>
 
 

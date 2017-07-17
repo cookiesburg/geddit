@@ -2,9 +2,9 @@
 
 
 <%= form_for @user, url: {action: "create"}, html: {class: "sign_up_form"} do |f| %>
-  <p><h3>
+  <p>
     <div>
-      <%= f.label :username %>
+      <%= f.label 'user' %>
       <%= f.text_field :username %>
     </div>
     <div>
@@ -18,5 +18,5 @@
     <div>
       <%= f.submit "Create" %>
     </div>
-    </h3></p>
+    </p>
 <% end %>

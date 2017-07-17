@@ -1,7 +1,12 @@
-<h1>Post</h1>
+<body>
 
-<h2>Title: <%= @post.title %>
-<h3><%= @post.body%> 
-<h3>Creator: <%= @post.user_id%>
-<h3>Birthday: <%= @post.created_at%>
-<h3>Subreddit: <%=@subreddit.title %>
+<h2>Post</h2>
+
+<h3>Title: <%= @post.title %>
+
+<p class="post_box"><%= @post.body%></p>
+
+<h5>Posted By: <%= User.find(@post.user_id).username %> @ <%= @post.created_at%>
+<h4>Return to: <%= link_to @post.subreddit.title, :controller => :subreddits, :action => :show, :id => @post.subreddit.id %>
+
+</body>
